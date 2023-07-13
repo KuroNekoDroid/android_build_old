@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     screenrecord \
     SecureElement \
     SharedStorageBackup \
-    SimAppDialog \
     Telecom \
     TelephonyProvider \
     TeleService \
