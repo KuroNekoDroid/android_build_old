@@ -154,11 +154,11 @@ function check_product()
         return
     fi
     if (echo -n $1 | grep -q -e "^lineage_") ; then
-        LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
+        KURONEKO_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
     else
-        LINEAGE_BUILD=
+        KURONEKO_BUILD=
     fi
-    export LINEAGE_BUILD
+    export KURONEKO_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
