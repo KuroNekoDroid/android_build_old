@@ -15,7 +15,7 @@
 #
 
 # Base modules and settings for the system partition.
-ifneq ($(MAX_PERF),true)
+ifneq ($(MAX_PERF),)
 PRODUCT_PACKAGES += \
     atrace \
     bootstat \
