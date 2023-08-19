@@ -15,6 +15,20 @@
 #
 
 # Base modules and settings for the system partition.
+ifneq ($(MAX_PERF),true)
+PRODUCT_PACKAGES += \
+    atrace \
+    bootstat \
+    bugreport \
+    bugreportz \
+    traced \
+    traced_probes \
+    WallpaperBackup
+PRODUCT_HOST_PACKAGES += \
+    BugReport \
+    lpdump
+endif
+
 PRODUCT_PACKAGES += \
     abx \
     adbd_system_api \
@@ -32,7 +46,6 @@ PRODUCT_PACKAGES += \
     appops \
     app_process \
     appwidget \
-    atrace \
     audioserver \
     BackupRestoreConfirmation \
     bcc \
@@ -40,12 +53,9 @@ PRODUCT_PACKAGES += \
     blkid \
     bmgr \
     bootanimation \
-    bootstat \
     boringssl_self_test \
     bpfloader \
     bu \
-    bugreport \
-    bugreportz \
     cgroups.json \
     charger \
     cmd \
@@ -74,8 +84,6 @@ PRODUCT_PACKAGES += \
     com.android.wifi \
     ContactsProvider \
     content \
-    CtsShimPrebuilt \
-    CtsShimPrivPrebuilt \
     debuggerd\
     device_config \
     dmctl \
@@ -213,10 +221,10 @@ PRODUCT_PACKAGES += \
     mdnsd \
     mediacodec.policy \
     mediaextractor \
-    mediametrics \
     media_profiles_V1_0.dtd \
     MediaProviderLegacy \
     mediaserver \
+    mediametrics \
     mke2fs \
     mkfs.erofs \
     monkey \
@@ -271,8 +279,6 @@ PRODUCT_PACKAGES += \
     telecom \
     telephony-common \
     tombstoned \
-    traced \
-    traced_probes \
     tune2fs \
     tzdatacheck \
     uiautomator \
@@ -283,7 +289,6 @@ PRODUCT_PACKAGES += \
     viewcompiler \
     voip-common \
     vold \
-    WallpaperBackup \
     watchdogd \
     wificond \
     wifi.rc \
@@ -319,7 +324,6 @@ endif # EMMA_INSTRUMENT
 
 # Host tools to install
 PRODUCT_HOST_PACKAGES += \
-    BugReport \
     adb \
     art-tools \
     atest \
@@ -335,7 +339,6 @@ PRODUCT_HOST_PACKAGES += \
     idmap2 \
     incident_report \
     ld.mc \
-    lpdump \
     minigzip \
     mke2fs \
     mkfs.erofs \
