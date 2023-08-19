@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     bootstat \
     bugreport \
     bugreportz \
+    debuggerd\
     traced \
     traced_probes \
     WallpaperBackup
@@ -84,7 +85,6 @@ PRODUCT_PACKAGES += \
     com.android.wifi \
     ContactsProvider \
     content \
-    debuggerd\
     device_config \
     dmctl \
     dnsmasq \
