@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     debuggerd\
     traced \
     traced_probes \
+    lpdump \
     WallpaperBackup
 PRODUCT_HOST_PACKAGES += \
     BugReport \
@@ -216,7 +217,6 @@ PRODUCT_PACKAGES += \
     locksettings \
     logcat \
     logd \
-    lpdump \
     lshal \
     mdnsd \
     mediacodec.policy \
