@@ -153,11 +153,8 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
-    if (echo -n $1 | grep -q -e "^lineage_") ; then
-        KURONEKO_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
-    else
-        KURONEKO_BUILD=
-    fi
+    KURONEKO_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
+
     export KURONEKO_BUILD
 
         TARGET_PRODUCT=$1 \
